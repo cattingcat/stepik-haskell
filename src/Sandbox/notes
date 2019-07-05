@@ -1,0 +1,5 @@
+usefull methods from Monad typeclass:
+    liftM - fmap analog
+    ap - <*> analog
+        use them for Functor/Applicative instances for free
+
