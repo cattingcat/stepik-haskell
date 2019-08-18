@@ -3,3 +3,17 @@ usefull methods from Monad typeclass:
     ap - <*> analog
         use them for Functor/Applicative instances for free
 
+fix : (a -> a) -> a
+fix f = let x = f x in x
+
+fix : ((a -> b) -> (a -> b)) -> (a -> b)
+
+NatList = Nil | Cons Nat NatList
+NatList = \X -> Nil | Cons Nat X
+
+Nil : Nat -> NatList -> NatList
+cons = \n l -> (Cons n l) as NatList
+
+sumList : NatList -> Nat
+sumList = fix $ \s l
+
