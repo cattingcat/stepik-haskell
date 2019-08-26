@@ -1,4 +1,5 @@
-module Impls where
+module HsFp1.Impls where
+
 import Data.Char
 import Data.Tuple
 import Data.List

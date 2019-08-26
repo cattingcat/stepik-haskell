@@ -1,4 +1,4 @@
-module HsFp2.TraversableTest where
+module HsFp2.TraversableTriple where
 
 data Triple a = Tr a a a  deriving (Eq, Show)
 

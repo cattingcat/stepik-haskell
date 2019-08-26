@@ -1,4 +1,4 @@
-module Functors where
+module HsFp1.Functors where
 
 data Tree a = Leaf (Maybe a) | Branch (Tree a) (Maybe a) (Tree a) deriving Show
 

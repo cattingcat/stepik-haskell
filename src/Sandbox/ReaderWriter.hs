@@ -1,4 +1,4 @@
-module HsFp2.MonadsAndEffects.ReaderWriter where
+module Sandbox.ReaderWriter where
 import Data.Monoid
 
 -- ReaderT e (Writer w) a

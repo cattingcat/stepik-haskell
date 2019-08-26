@@ -48,10 +48,10 @@ tst2 = throwE "" <|> return 55
 tst3 :: Except String Int
 tst3 = action `catchE` (\_ -> throwE "a > b error") where 
     action = do
-    a <- return 5
-    b <- return 7
-    guard (a > b) ::Except String ()
-    return $ a + b
+        a <- return 5
+        b <- return 7
+        guard (a > b) ::Except String ()
+        return $ a + b
 
 
 tst4 = msum $ fmap (\ex -> ex `catchE` (throwE . show)) 

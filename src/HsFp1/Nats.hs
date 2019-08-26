@@ -1,4 +1,4 @@
-module Nats where
+module HsFp1.Nats where
 
 data Nat = Zero | Suc Nat deriving (Show)
 

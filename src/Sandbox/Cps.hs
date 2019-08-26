@@ -1,4 +1,4 @@
-module HsFp2.MonadsAndEffects.Cps where
+module Sandbox.Cps where
 -- CPS - Continuation Passing Style
 
 import Control.Monad

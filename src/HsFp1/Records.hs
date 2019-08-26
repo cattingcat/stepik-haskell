@@ -1,4 +1,4 @@
-module Records where
+module HsFp1.Records where
 
 data LogLevel = Error | Warning | Info
 

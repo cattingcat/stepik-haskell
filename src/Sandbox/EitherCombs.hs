@@ -1,6 +1,6 @@
 {-# LANGUAGE TypeOperators #-}
 
-module HsFp2.MonadsAndEffects.EitherCombs where
+module Sandbox.EitherCombs where
 
 data Error1 = A | B | C
 

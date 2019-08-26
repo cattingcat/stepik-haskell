@@ -1,4 +1,4 @@
-module Typeclasses where
+module HsFp1.Typeclasses where
 import Prelude(($))
 
 

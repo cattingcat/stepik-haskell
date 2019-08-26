@@ -1,6 +1,6 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
-module HsFp2.OddCont where
+module HsFp2.PhantomTypes where
 
 
 newtype Temperature a = Temp Double deriving (Show, Eq, Num)

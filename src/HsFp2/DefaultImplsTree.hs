@@ -1,4 +1,4 @@
-module HsFp2.OddCont where
+module HsFp2.DefaultImplsTree where
 import Data.Traversable (foldMapDefault, Traversable(..))
 
 data Tree a = Nil | Branch (Tree a) a (Tree a)  deriving (Eq, Show)

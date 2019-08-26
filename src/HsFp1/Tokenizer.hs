@@ -1,4 +1,4 @@
-module Tokenizer where
+module HsFp1.Tokenizer where
 import Data.Char
 import qualified Text.Read as T
 

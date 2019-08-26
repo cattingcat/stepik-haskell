@@ -17,6 +17,6 @@ sumList is = fix foo is where
 
 type Hungry a = Int -> a
 
-hungry :: Hungry a
-hungry = fix foo where 
-    foo f n = f
+-- hungry :: Hungry a
+-- hungry = fix foo where 
+--     foo f n = f

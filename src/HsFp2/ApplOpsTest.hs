@@ -1,4 +1,4 @@
-module HsFp2.ApplFoo where
+module HsFp2.ApplOpsTest where
 
 import Control.Applicative ((<**>), ZipList(..), liftA2)
 

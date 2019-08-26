@@ -1,4 +1,5 @@
-module Monoids where
+module HsFp1.Monoids where
+    
 import Prelude(Maybe(..), Show(..), Eq(..), ($))
 
 class Monoid a where

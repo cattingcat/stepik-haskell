@@ -1,4 +1,4 @@
-module ParsePerson where
+module HsFp1.ParsePerson where
 
 import Data.String
 import Data.List(all)

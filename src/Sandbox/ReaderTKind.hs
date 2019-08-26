@@ -6,7 +6,7 @@
 
 
 
-module HsFp2.MonadsAndEffects.ReaderTKind where
+module Sandbox.ReaderTKind where
 
 -- PolyKind and KingSig
 newtype ReaderT (e :: *) (m :: k -> *) (a :: k) = ReaderT { runReaderT :: e -> m a }

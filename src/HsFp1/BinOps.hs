@@ -1,4 +1,5 @@
-module BinOps where
+module HsFp1.BinOps where
+    
 import Data.Char
 import Data.Tuple
 import Data.List

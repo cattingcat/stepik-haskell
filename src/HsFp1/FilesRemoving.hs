@@ -1,4 +1,5 @@
-module FilesRemoving where
+module HsFp1.FilesRemoving where
+    
 import System.Directory
 import Data.List
 

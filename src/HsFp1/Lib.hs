@@ -1,4 +1,5 @@
-module Lib where
+module HsFp1.Lib where
+    
 import Data.List
 import Data.Char
 import GHC.Base

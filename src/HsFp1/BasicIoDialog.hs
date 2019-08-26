@@ -1,4 +1,4 @@
-module BasicIoDialog where
+module HsFp1.BasicIoDialog where
 
 main :: IO ()
 main = do 

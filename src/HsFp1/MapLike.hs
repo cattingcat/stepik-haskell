@@ -1,4 +1,4 @@
-module MapLike where 
+module HsFp1.MapLike where 
 
 import Prelude hiding (lookup)
 import qualified Data.List as L

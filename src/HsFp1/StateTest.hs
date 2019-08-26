@@ -1,4 +1,4 @@
-module StateTest where 
+module HsFp1.StateTest where 
 import Control.Monad.State (State, get, put, execState, modify', runState, evalState)
 import Control.Monad (replicateM)
 

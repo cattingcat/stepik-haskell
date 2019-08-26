@@ -1,5 +1,4 @@
-module Exprs where
-
+module HsFp1.Exprs where
 
 infixl 6 :+:
 infixl 7 :*:
