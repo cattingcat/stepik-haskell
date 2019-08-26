@@ -5,6 +5,8 @@
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE UndecidableInstances #-}
+{-# LANGUAGE FlexibleInstances #-}
+
 
 module Sandbox.SingletonTypes where
 
@@ -64,4 +66,19 @@ type family ToFunc (ts :: [*]) :: * where
 
 toFuncTst :: ToFunc [Int, Int, Int]
 toFuncTst a b = a + b
+
+
+
+data Alphabet = A | B | C 
+data KekAlpha :: Alphabet -> * -> * where 
+    KekAlpha :: v -> KekAlpha a v
+
+-- class KnownAlphabet (a :: Alphabet) where 
+--     alphSing :: Alphabet
+
+tst1A :: KekAlpha A Int
+tst1A = KekAlpha 55
+
+foo :: KekAlpha a Int -> Alphabet
+foo ka = undefined
 
