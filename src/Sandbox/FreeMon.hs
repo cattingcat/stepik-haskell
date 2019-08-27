@@ -204,7 +204,11 @@ instance Functor f => Applicative (Free f) where
 
 instance Functor f => Functor (Free f) where
   fmap = liftM
-
+  
+  
+retract :: Monad f => Free f a -> f a
+retract (ReturnF a) = pure a
+retract (WrapF fa) = fa >>= retract
 
 
 data InteractionOp :: * -> * where
