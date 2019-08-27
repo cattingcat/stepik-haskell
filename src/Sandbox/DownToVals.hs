@@ -7,10 +7,12 @@
 {-# LANGUAGE UndecidableInstances #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE RankNTypes #-}
-{-# LANGUAGE ScopedTypeVariables #-}
+{-# LANGUAGE ScopedTypeVariables #-} -- we need it for (get :: AlphW a)
 
 
 module Sandbox.DownToVals where
+
+import GHC.TypeLits
 
 data Alph = A | B deriving (Show)
 
@@ -20,7 +22,7 @@ data SomeType (a :: Alph) where
 
 
 
-newtype AlphW (a :: Alph) = AlphW Alph
+newtype AlphW (a :: Alph) = AlphW { unAlph :: Alph }
 
 class GetAlph (a :: Alph) where 
     get :: AlphW a
@@ -32,12 +34,27 @@ instance GetAlph B where
 
 -- foo :: forall (a :: Alph) p. (GetAlph a) => p a -> Alph
 getAlph :: forall (a :: Alph). (GetAlph a) => SomeType a -> Alph
-getAlph a = case get :: AlphW a of 
-    AlphW v -> v
+getAlph a = unAlph (get :: AlphW a)
 
 
-tst1 :: Alph
-tst1 = getAlph SomeTypeA
+tst11 :: Alph
+tst11 = getAlph SomeTypeA
 
-tst2 :: Alph
-tst2 = getAlph SomeTypeB
+tst12 :: Alph
+tst12 = getAlph SomeTypeB
+
+
+
+{-
+    Same things for standart Strings type
+    http://ponies.io/posts/2014-07-30-typelits.html
+-}
+
+
+data SomeSymboledType (a :: Symbol) = Ssta | Sstb
+
+getSymb :: forall a. (KnownSymbol a) => SomeSymboledType a -> String
+getSymb sst = symbolVal sst -- symbolVal also generalize proxy
+
+tst21 :: String
+tst21 = getSymb (Ssta :: SomeSymboledType "kek")
