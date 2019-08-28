@@ -77,6 +77,15 @@ type Tst3 = Tst2 [Int, String] String '[JSON]
 class HasConversion a where 
   type ConverterT a :: *
    
+class CommonSerializable a p where 
+  serialize :: p -> a -> String
+  
+instance ToJson a => CommonSerializable a (Proxy JSON) where serialize _ = toJson
+instance ToPlainText a => CommonSerializable a (Proxy PlainText) where serialize _ = toPlainText
+  
+serialize' :: (FormatConstraint '[f] a, CommonSerializable a (Proxy f)) => Proxy f -> a -> String
+serialize' = serialize  
+   
 
 instance FormatConstraint serializers result => HasConversion ((sources :: [*]) :>> (result :: *) :## (serializers :: [Format])) where 
   type ConverterT ((sources :: [*]) :>> (result :: *) :## (serializers :: [Format])) = BuildFunc sources result
