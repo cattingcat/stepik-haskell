@@ -25,7 +25,9 @@ dependencies:
 - text
 - mtl
 - transformers
+- containers
 - parsec
+- lens
 
 library:
   source-dirs: src
