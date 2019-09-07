@@ -87,7 +87,7 @@ instance ToCSV (String, String) where
   toCsv (s1, s2) = s1 ++ ", " ++ s2
 
 ssTupleSerializer :: Format -> (String, String) -> Maybe String
-ssTupleSerializer = _ -- createSerializer (Proxy :: Proxy SSTupleSerializer)
+ssTupleSerializer = undefined -- createSerializer (Proxy :: Proxy SSTupleSerializer)
 
 tst1 = ssTupleSerializer JSON ("kek", "puk")      -- Just
 tst2 = ssTupleSerializer CSV ("kek", "puk")       -- Just
