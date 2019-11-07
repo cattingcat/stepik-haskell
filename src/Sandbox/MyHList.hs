@@ -6,11 +6,20 @@
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE UndecidableInstances #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE AllowAmbiguousTypes #-}
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE TypeApplications #-}
 
 
 module Sandbox.MyHList where
 
 import GHC.Exts (Constraint)
+import GHC.TypeNats
+import Data.Kind (Type)
+import GHC.Natural (Natural)
+import Data.Data (Proxy)
+import Data.Type.Equality ((:~:) (..))
 
 
 infixr 5 :::
@@ -39,3 +48,28 @@ showHList (x ::: xs) = (show x) : showHList xs
 
 instance (AllHave Show ts) => Show (HList ts) where 
     show = show . showHList
+    
+    
+type family FixList (n :: Nat) (a :: Type) :: [Type] where 
+  FixList 1 a = '[a]
+  FixList n a = a : FixList (n - 1) a
+  
+type family FixHList (n :: Nat) (a :: Type) :: Type where
+  FixHList n a = HList (FixList n a)
+  
+tstFixHList :: FixHList 5 Int
+tstFixHList = 1 ::: 2 ::: 3 ::: 4 ::: 5 ::: HNil
+
+
+
+
+tmp2 :: HList [String, Int, Char, String]
+tmp2 = "He" ::: 11 ::: '0' ::: " world" ::: HNil
+
+type family GetAt (n :: Nat) (l :: [Type]) :: Type where
+  GetAt 0 (h:t) = h
+  GetAt n (h:t) = GetAt (n - 1) t
+
+headHl :: HList ts -> Maybe (GetAt 0 ts)
+headHl HNil = Nothing
+headHl (h ::: t) = Just h

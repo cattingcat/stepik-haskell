@@ -22,12 +22,20 @@ description:         Please see the README on GitHub at <https://github.com/gith
 dependencies:
 - base >= 4.7 && < 5
 - directory
+- parallel
+- monad-par
+- deepseq
+- repa
+- stm
+- async
+- vector
 - text
 - mtl
 - transformers
 - containers
 - parsec
 - lens
+- first-class-families
 
 library:
   source-dirs: src
