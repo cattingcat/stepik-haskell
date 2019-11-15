@@ -36,6 +36,12 @@ dependencies:
 - parsec
 - lens
 - first-class-families
+- aeson
+- kan-extensions
+- indexed
+- do-notation
+- constraints
+- singletons
 
 library:
   source-dirs: src
