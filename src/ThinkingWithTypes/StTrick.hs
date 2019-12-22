@@ -1,6 +1,6 @@
 {-# LANGUAGE RankNTypes #-}
 
-module ThinkingWithTypes.ThinkingWithTypes3 where
+module ThinkingWithTypes.StTrick where
 
 import GHC.Base
 import GHC.IORef (IORef, newIORef, readIORef, writeIORef)
