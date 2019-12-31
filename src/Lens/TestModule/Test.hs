@@ -13,3 +13,4 @@ kek = MkKek 1 "kek"
 puk = MkPuk 1 "kek"
 
 --tst11 = (kek ^. dt) ++ (puk ^. dt) 
+
