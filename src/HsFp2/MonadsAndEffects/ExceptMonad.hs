@@ -46,7 +46,7 @@ infixl 9 !!!
 (!!!) as ind = loop as ind where
     loop [] i | i >= 0 = throwE $ ErrIndexTooLarge ind
     loop (a:as) 0 = return a
-    loop (a:as) n = loop as (n-1)
+    loop (a:as) n = loop as (n - 1)
 
 
 

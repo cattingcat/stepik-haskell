@@ -110,7 +110,7 @@ hLen (h :# t) = 1 + hLen t
 hHead :: HList (t ': ts) -> t
 hHead (h :# _) = h
 
-show3of4 :: Show a => HList '[_1, _2, a, _3] -> String
+show3of4 :: Show a => HList '[w1, w2, a, w3] -> String
 show3of4 (_ :# _ :# a :# _) = show a
 
 tst6' = 1 :# 2.9 :# "kek" :# Just True :# HNil

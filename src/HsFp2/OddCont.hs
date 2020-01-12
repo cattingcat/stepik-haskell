@@ -49,7 +49,7 @@ cntInf = Bi 'A' 'B' cntInf
 test1 = (+1) <$> cnt5   -- Bi 4 5 (Bi 2 3 (Un 43))
 --test2 = toList cnt5     -- [3,4,1,2,42]
 test3 = sum cnt5        -- 52
-test4 = traverse (\x->[x+2,x-2]) cnt1 -- [Un 44,Un 40]
+test4 = traverse (\x->[x + 2, x - 2]) cnt1 -- [Un 44,Un 40]
 
 
 concat3OC :: OddC a -> OddC a -> OddC a -> OddC a
@@ -76,7 +76,7 @@ tst24 = concatOC $ Bi tst21 tst22 (Un tst23) -- Bi 'a' 'b' (Bi 'c' 'd' (Bi 'e' '
 
 
 tst31 = (Bi (+1) (+2) (Un (+3))) <*> (Bi 1 2 (Un 3))
-tst31' = [(+1), (+2), (+3)] <*> [1,2,3]
+tst31' = [(+1), (+2), (+3)] <*> [1, 2, 3]
 
 
 

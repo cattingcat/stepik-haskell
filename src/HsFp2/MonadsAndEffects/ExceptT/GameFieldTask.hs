@@ -21,7 +21,7 @@ moves m s p = runExceptT $ loop s p where
     loop 1 p = around m p
     loop s p = do
         pi <- around m p
-        r <- loop (s-1) pi
+        r <- loop (s - 1) pi
         return r
 
 waysToDie :: DeathReason -> GameMap -> Int -> Point -> Int

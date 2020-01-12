@@ -11,8 +11,8 @@ main = putStr "Hello"
 fib :: Int -> Int 
 fib n = foo 0 1 n where 
     foo a _ 0 = a
-    foo a b n | n > 0 = foo b (a+b) (n-1)
-    foo a b n | n < 0 = foo (b-a) a (n+1)
+    foo a b n | n > 0 = foo b (a+b) (n - 1)
+    foo a b n | n < 0 = foo (b-a) a (n + 1)
     
 seqA :: Int -> Int 
 seqA n = foo 1 2 3 n where 
@@ -29,12 +29,12 @@ snc n | n > 0 = let
 
 integration :: (Double -> Double) -> Double -> Double -> Double
 integration f a b = let 
-    n = 1000
+    n = 1_000 :: Double
     h = (b - a) / n
     sides = ()
     others acc x 0 = acc
-    others acc x n = others (f x + acc) (x + h) (n-1)
-    in h * (f a + f b + 2 * others 0 (a+h) (n-1)) / 2
+    others acc x n = others (f x + acc) (x + h) (n - 1)
+    in h * (f a + f b + 2 * others 0 (a+h) (n - 1)) / 2
 
 
 -- integration :: (Double -> Double) -> Double -> Double -> Double
@@ -134,7 +134,7 @@ meanList = foo . foldr (\x (s, n) -> (s + x, n + 1)) (0,0) where
 
 
 evenOnly' :: [a] -> [a]
-evenOnly' l = fst $ foldr (\x (agg, i) -> if even i then (x:agg, i-1) else (agg, i-1) ) ([], length l) l
+evenOnly' l = fst $ foldr (\x (agg, i) -> if even i then (x:agg, i - 1) else (agg, i - 1) ) ([], length l) l
 
 
 -- evenOnly :: [a] -> [a]

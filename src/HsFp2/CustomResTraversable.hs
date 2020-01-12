@@ -31,8 +31,8 @@ instance Traversable Result where
 
 
 
-test1 = traverse (\x -> [x+2,x-2]) (Ok 5)         -- [Ok 7,Ok 3]
-test2 = traverse (\x -> [x+2,x-2]) (Error "!!!")  -- [Error "!!!"]
+test1 = traverse (\x -> [x + 2, x - 2]) (Ok 5)         -- [Ok 7,Ok 3]
+test2 = traverse (\x -> [x + 2, x - 2]) (Error "!!!")  -- [Error "!!!"]
 
 
 data MyTuple a = forall b. MyTuple (b, a)

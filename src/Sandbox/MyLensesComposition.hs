@@ -36,13 +36,13 @@ tst12 = modify (tupleLens @. tupleLens) (+55) ((1, 2), 3)
 ix :: Int -> OldLens [a] a
 ix n = OldLens (get' n) (modify' n) where
   get' 0 (x:_) = x
-  get' n (x:xs) = get' (n-1) xs
+  get' n (x:xs) = get' (n - 1) xs
   get _ _ = error "Index err"
   modify' 0 f (x:xs) = f x : xs
-  modify' n f (x:xs) = x : modify' (n-1) f xs
+  modify' n f (x:xs) = x : modify' (n - 1) f xs
   modify' _ _ _ = error "Inder err"
 
-tst21 = modify (tupleLens @. ix 1) (+55) [(1,2), (3,4), (5,6)]
+tst21 = modify (tupleLens @. ix 1) (+55) [(1, 2), (3, 4), (5, 6)]
 
 {-
 
@@ -97,7 +97,7 @@ ixt n = Lenst' $ lens n where
   lens :: Functor f => Int -> (a -> f a) -> [a] -> f [a]
   lens _ f [] = error "index error"
   lens 0 f (x:xs) = fmap (:xs) (f x)
-  lens n f (x:xs) = fmap (x:) (lens (n-1) f xs)
+  lens n f (x:xs) = fmap (x:) (lens (n - 1) f xs)
 
 tst41 = runLenst' (ixt 5) (\i -> Identity (i + 1)) [1,2,3,4,5,6,7,8,9,0]
 
@@ -112,4 +112,4 @@ ixts n = Lenst' $ lens n where
   lens :: Functor f => Int -> (a -> f a) -> [a] -> f [a]
   lens _ f [] = error "index error"
   lens 0 f (x:xs) = fmap (:xs) (f x)
-  lens n f (x:xs) = fmap (x:) (lens (n-1) f xs)
+  lens n f (x:xs) = fmap (x:) (lens (n - 1) f xs)
