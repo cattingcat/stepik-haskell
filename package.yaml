@@ -58,6 +58,10 @@ default-extensions:
 
 library:
   source-dirs: src
+  ghc-options:
+    - -Wincomplete-patterns
+    - -Wincomplete-uni-patterns
+    - -Wincomplete-record-updates
 
 executables:
   hs-examples-exe:
