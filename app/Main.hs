@@ -1,4 +1,7 @@
 module Main where
 
+import qualified HaskellInDepth.Quotes.Main as QM
+
+
 main :: IO ()
-main = putStrLn "What is your name?"
+main = QM.main

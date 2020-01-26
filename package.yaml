@@ -21,28 +21,37 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- safe                # Safe alternatives to prelude partial functions
 - directory
 - parallel
 - monad-par
-- deepseq
+- deepseq             # `seq` for nested structures
 - repa
-- stm
+- stm                 # Software transact mem
 - async
-- vector
-- text
-- mtl
+- vector              # Vector data structure
+- text                # Text processind and input/output
+- time                # Date/time/timezones etc
+- bytestring          # IO for binary data
+- fmt                 # Text formatting
+- Chart               # Chart drawing
+- Chart-diagrams
+- blaze-html          # generating html
+- cassava             # CSV parsing
+- optparse-applicative  # command line args
+- mtl                 # Monad transformers
 - transformers
 - containers
 - parsec
 - lens
 - first-class-families
-- aeson
+- aeson               # JSON
 - kan-extensions
 - indexed
 - do-notation
 - constraints
 - singletons
-- conduit
+- conduit             # Streams
 
 default-extensions:
   - MultiWayIf                  # if | cond -> ...

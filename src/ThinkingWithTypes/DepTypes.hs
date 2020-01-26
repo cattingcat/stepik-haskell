@@ -43,13 +43,18 @@ toSomeBool :: Bool -> SomeSBool
 toSomeBool True   = SomeSBool STrue
 toSomeBool False  = SomeSBool SFalse
 
+tst2 = do
+  b <- readLn
+  let 
+    someBool = toSomeBool b
+    bool = withSomeBool someBool fromSBool
+  putStrLn (show bool)
 
 
 tst1 = let
   someBool = toSomeBool True
   bool = withSomeBool someBool fromSBool
   in trace (show bool) 0
-
 
 
 
@@ -62,7 +67,7 @@ instance HelloClass 'True where
 instance HelloClass 'False where
   say = unsafePerformIO (print "False")
 
-tst2 = let
+tst3 = let
   someBool = toSomeBool True
 --  p = withSomeBool someBool (\(_ :: SBool b) -> say @b)
   p = withSomeBool someBool foo
