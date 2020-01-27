@@ -46,8 +46,8 @@ instance (Monad m) => Monad (Arr2T e1 e2 m) where
 
 instance (Monad m) => Monad (Arr3T e1 e2 e3 m) where 
     return = pure
-    fail :: String -> Arr3T e1 e2 e3 m a
-    fail s = Arr3T $ \_ _ _ -> fail s
+--    fail :: String -> Arr3T e1 e2 e3 m a
+--    fail s = Arr3T $ \_ _ _ -> fail s
     (>>=) :: Arr3T e1 e2 e3 m a -> (a -> Arr3T e1 e2 e3 m b) -> Arr3T e1 e2 e3 m b
     (Arr3T va) >>= f = Arr3T $ \e1 e2 e3 -> do 
         v <- va e1 e2 e3

@@ -17,7 +17,8 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-resolver: lts-13.25
+#resolver: lts-13.25
+resolver: nightly-2020-01-19
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -40,6 +41,20 @@ packages:
 extra-deps:
   - indexed-0.1.3
   - do-notation-0.1.0.2
+  - Chart-diagrams-1.9.3
+  - fmt-0.6.1.2
+  - repa-3.4.1.4
+  - SVGFonts-1.7.0.1@sha256:af422f17a3a87f2d7185ba7ea4b1cf693f71c164e99ce7386f1902145db25df0,3909
+  - diagrams-core-1.4.2@sha256:8de4baded626214d0d5c62d60ff230fd580d4383ae19e5efeea4dec720728dd2,2912
+  - diagrams-lib-1.4.3@sha256:a0339e290e7b080a742afceb91831aa10b117038e1039ecdc7ddd3f1be456e89,8032
+  - diagrams-postscript-1.5@sha256:e68a647957128db6878229f92d2a6be8f786211400c20d23ae2fd4594214af2d,2313
+  - diagrams-svg-1.4.3@sha256:d926916f0807b04193c16636b3fe92a43748d62d13fa92420b65ec841a8c6ace,3100
+  - svg-builder-0.1.1@sha256:43c2adbb301592666d44d32b4741ffe68fb58ed2ac873c2bd9cc86cadeac1680,1477
+  - active-0.2.0.14@sha256:181131051459253ffe867ba145791ffb94ff8f8b02332421397619a5e6fb019e,1764
+  - diagrams-solve-0.1.1@sha256:8ed66891bb42f9cd5e77b02a0f8ebaa91a2363a82a007313f90c7f57806688fa,1713
+  - dual-tree-0.2.2.1@sha256:9ff31e461d873ae74ba51d93b454c0c4094726d7cb78a0c454394c965e83539d,2830
+  - monoid-extras-0.5.1@sha256:2324414ed6cfa57f38d5d7e3e676b0dfdba0d070a8b12df78bb71eb84d2b1d2d,2242
+  - statestack-0.3@sha256:36131f4e7c9a821a7460a2e54cda51e28c4ae1161f7bba4b0b254f8d4241efe4,1071
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

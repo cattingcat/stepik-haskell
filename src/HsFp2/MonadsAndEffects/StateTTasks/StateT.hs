@@ -40,7 +40,7 @@ instance Monad m => Monad (StateT s m) where
         ~(v, s') <- runStateT mv s
         let mb = f v
         runStateT mb s'
-    fail str = StateT $ \s -> fmap (\v -> (v, s)) (fail str)
+--    fail str = StateT $ \s -> fmap (\v -> (v, s)) (fail str)
 
 -- instance MonadFail (StateT s m) where 
 --     fail s = undefined

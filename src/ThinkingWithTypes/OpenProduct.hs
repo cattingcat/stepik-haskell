@@ -23,7 +23,7 @@ import qualified Data.Vector as V
 import GHC.OverloadedLabels (IsLabel (..))
 import GHC.TypeLits
 import Unsafe.Coerce (unsafeCoerce)
-import Fcf hiding (type (+))
+import Fcf hiding (type (+), Any)
 
 
 data Any f where 

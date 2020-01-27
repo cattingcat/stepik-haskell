@@ -19,7 +19,7 @@ instance Monad m => Monad (LoggT m) where
         (Logged s a) <- runLoggT m
         (Logged s' b) <- runLoggT (k a)
         return $ Logged (s ++ s') b
-    fail msg = LoggT $ fail msg
+--    fail msg = LoggT $ fail msg
 
 instance Monad m => Applicative (LoggT m) where
     pure = return

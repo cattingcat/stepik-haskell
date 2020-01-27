@@ -2,7 +2,7 @@
 {-# LANGUAGE TypeFamilies #-}
 
 module Sandbox.IoTests where
-import Data.Foldable
+import Data.Foldable hiding (foldMap')
 import Data.Monoid
 import Control.Monad
 import Control.Monad.Reader

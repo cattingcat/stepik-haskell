@@ -18,9 +18,107 @@ packages:
       sha256: e4d2c2d6de661073bbfcfcbfe0feb690be2f906fb1fc0bddc0238bb437de7808
   original:
     hackage: do-notation-0.1.0.2
+- completed:
+    hackage: Chart-diagrams-1.9.3@sha256:14b3931b1df98c978d82c5f51a26152d18681fe918a7165ab737cc02043d3e66,1735
+    pantry-tree:
+      size: 934
+      sha256: dd6fd1d11e3940b4b951a4d73a2baf4ea5fd1a96cd9724904a27c9b4dc065c93
+  original:
+    hackage: Chart-diagrams-1.9.3
+- completed:
+    hackage: fmt-0.6.1.2@sha256:405a1bfc0ba0fd99f6eb1ee71f100045223f79204f961593012f28fd99cd1237,5319
+    pantry-tree:
+      size: 1004
+      sha256: 45fad678e9b54ef4d7872ff052a4cfe6d49912b9c7fb9fc4af881587f0713f6b
+  original:
+    hackage: fmt-0.6.1.2
+- completed:
+    hackage: repa-3.4.1.4@sha256:5c836bc314ea04ac284d21117b361eb95829d793e8f82508535aa0ca04911d9e,3315
+    pantry-tree:
+      size: 2965
+      sha256: 658dece8ff797a9ff0940ad812b966e0a93c3e4442f73c27b96d615106db7db8
+  original:
+    hackage: repa-3.4.1.4
+- completed:
+    hackage: SVGFonts-1.7.0.1@sha256:af422f17a3a87f2d7185ba7ea4b1cf693f71c164e99ce7386f1902145db25df0,3909
+    pantry-tree:
+      size: 1836
+      sha256: 13f2c1b8ad72eefc1adb87229a2ccdc11be680dafe2fd7c65d52d751dcf885c8
+  original:
+    hackage: SVGFonts-1.7.0.1@sha256:af422f17a3a87f2d7185ba7ea4b1cf693f71c164e99ce7386f1902145db25df0,3909
+- completed:
+    hackage: diagrams-core-1.4.2@sha256:8de4baded626214d0d5c62d60ff230fd580d4383ae19e5efeea4dec720728dd2,2912
+    pantry-tree:
+      size: 2018
+      sha256: 5c6f13e11336dfa2b06bb732a04e9e338f7ed7b377b03673a0381ab2cc2c9157
+  original:
+    hackage: diagrams-core-1.4.2@sha256:8de4baded626214d0d5c62d60ff230fd580d4383ae19e5efeea4dec720728dd2,2912
+- completed:
+    hackage: diagrams-lib-1.4.3@sha256:a0339e290e7b080a742afceb91831aa10b117038e1039ecdc7ddd3f1be456e89,8032
+    pantry-tree:
+      size: 11604
+      sha256: 61e028d1c5d720538bc81631d53fa8db55ec9124fdec5e92875fa55663c19642
+  original:
+    hackage: diagrams-lib-1.4.3@sha256:a0339e290e7b080a742afceb91831aa10b117038e1039ecdc7ddd3f1be456e89,8032
+- completed:
+    hackage: diagrams-postscript-1.5@sha256:e68a647957128db6878229f92d2a6be8f786211400c20d23ae2fd4594214af2d,2313
+    pantry-tree:
+      size: 480
+      sha256: fd30036dfd3ce8050119c7ebea0e722b8a91c3ad3b428ab2f4ef3fdc1ec2a7ff
+  original:
+    hackage: diagrams-postscript-1.5@sha256:e68a647957128db6878229f92d2a6be8f786211400c20d23ae2fd4594214af2d,2313
+- completed:
+    hackage: diagrams-svg-1.4.3@sha256:d926916f0807b04193c16636b3fe92a43748d62d13fa92420b65ec841a8c6ace,3100
+    pantry-tree:
+      size: 475
+      sha256: c3ba2bef984f69ad3fb5f2957bdadff973bf7a689da9e2be10925c1035536ea7
+  original:
+    hackage: diagrams-svg-1.4.3@sha256:d926916f0807b04193c16636b3fe92a43748d62d13fa92420b65ec841a8c6ace,3100
+- completed:
+    hackage: svg-builder-0.1.1@sha256:43c2adbb301592666d44d32b4741ffe68fb58ed2ac873c2bd9cc86cadeac1680,1477
+    pantry-tree:
+      size: 535
+      sha256: 897cdee109d3aa0a733b043519694f432e5421d656e5dcc7abd1ba7df3a68019
+  original:
+    hackage: svg-builder-0.1.1@sha256:43c2adbb301592666d44d32b4741ffe68fb58ed2ac873c2bd9cc86cadeac1680,1477
+- completed:
+    hackage: active-0.2.0.14@sha256:181131051459253ffe867ba145791ffb94ff8f8b02332421397619a5e6fb019e,1764
+    pantry-tree:
+      size: 1017
+      sha256: 9c16a081b9366a546a9af972bc2aaaf4a4a878fda57147164b5c3aef1123e3c1
+  original:
+    hackage: active-0.2.0.14@sha256:181131051459253ffe867ba145791ffb94ff8f8b02332421397619a5e6fb019e,1764
+- completed:
+    hackage: diagrams-solve-0.1.1@sha256:8ed66891bb42f9cd5e77b02a0f8ebaa91a2363a82a007313f90c7f57806688fa,1713
+    pantry-tree:
+      size: 469
+      sha256: eb09d6fe6c342061bc83bbdbe702692eae33b7d7e691a29e7112499a537494d3
+  original:
+    hackage: diagrams-solve-0.1.1@sha256:8ed66891bb42f9cd5e77b02a0f8ebaa91a2363a82a007313f90c7f57806688fa,1713
+- completed:
+    hackage: dual-tree-0.2.2.1@sha256:9ff31e461d873ae74ba51d93b454c0c4094726d7cb78a0c454394c965e83539d,2830
+    pantry-tree:
+      size: 387
+      sha256: 70ea91862ac301648d63e9c69d0ff8154b1d3c9c632d224d4002c027861ec33e
+  original:
+    hackage: dual-tree-0.2.2.1@sha256:9ff31e461d873ae74ba51d93b454c0c4094726d7cb78a0c454394c965e83539d,2830
+- completed:
+    hackage: monoid-extras-0.5.1@sha256:2324414ed6cfa57f38d5d7e3e676b0dfdba0d070a8b12df78bb71eb84d2b1d2d,2242
+    pantry-tree:
+      size: 1187
+      sha256: fd8e28e6d39def8ba12ba5d6a45e3d13532640f265e5163daf37b8e4b9ae3c38
+  original:
+    hackage: monoid-extras-0.5.1@sha256:2324414ed6cfa57f38d5d7e3e676b0dfdba0d070a8b12df78bb71eb84d2b1d2d,2242
+- completed:
+    hackage: statestack-0.3@sha256:36131f4e7c9a821a7460a2e54cda51e28c4ae1161f7bba4b0b254f8d4241efe4,1071
+    pantry-tree:
+      size: 272
+      sha256: 24c3fd6f5333ea45904648a14f8a570ac68bed8d955ae91d4247eff98e8f9534
+  original:
+    hackage: statestack-0.3@sha256:36131f4e7c9a821a7460a2e54cda51e28c4ae1161f7bba4b0b254f8d4241efe4,1071
 snapshots:
 - completed:
-    size: 499461
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/13/25.yaml
-    sha256: aed98969628e20615e96b06083c933c7e3354ae56b08b75e607a26569225d6c0
-  original: lts-13.25
+    size: 458453
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2020/1/19.yaml
+    sha256: 86ccc1bdbea73b2c211685f9156d3483e405153b24f60248d6cb6771da80bfbd
+  original: nightly-2020-01-19

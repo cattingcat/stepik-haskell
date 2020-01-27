@@ -73,7 +73,7 @@ library:
     - -Wincomplete-record-updates
 
 executables:
-  hs-examples-exe:
+  hs-examples:                  # name of executable
     main:                Main.hs
     source-dirs:         app
     ghc-options:
